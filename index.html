@@ -18,8 +18,10 @@
 		</video>
 		<div class="warning">
 			<div class="warning-text">
-				<h3>This website is intended to be viewed in fullscreen mode</h3>
+				<h3>This website is intended to be viewed on desktops in fullscreen mode</h3>
+				<h3>If you are on a laptop, and the layout seems to be broken, press CTRL and Scroll Down to zoom out until about 80%</h3>
 				<h3>Please press the button below to go fullscreen and continue</h3>
+				<h3>Use <a href="https://google.com/chrome">Google Chrome</a> for the best experience</h3>
 				<div class="start-button" onclick="startButton()">Press here to start</div>
 			</div>
 		</div>
@@ -65,6 +67,80 @@
 			<div class="gallery-title-box">
 				<div class="title-text">Gallery</div>
 			</div>
+			<div class="go-left" onclick="homeButton()">
+				<img src="images\left.png" class="left-arrow">
+				<div class="right-text">To<br>Profiles</div>
+			</div>
+			<div class="image-box">
+				<div class="box-left">
+					<img src="images\box-left.png" onclick="boxLeft()">
+				</div>
+				<div class="box-right">
+					<img src="images\box-right.png" onclick="boxRight()">
+				</div>
+				<img class="boxed-image grove landscape" src="images\grove.jpg">
+				<img class="boxed-image hydraulics portrait" src="images\hydraulics.jpg">
+				<img class="boxed-image baun landscape" src="images\baun.jpg">
+				<img class="boxed-image khoury landscape" src="images\khoury.jpg">
+				<img class="boxed-image concert portrait" src="images\concert.jpg">
+				<img class="boxed-image ctc portrait" src="images\ctc.jpg">
+				<img class="boxed-image printer portrait" src="images\printer.jpg">
+				<img class="boxed-image duc portrait" src="images\duc.jpg">
+				<img class="boxed-image emergency portrait" src="images\emergency.jpg">
+				<img class="boxed-image emergency2 portrait" src="images\emergency2.jpg">
+				<img class="boxed-image financial portrait" src="images\financial.jpg">
+				<img class="boxed-image gym portrait" src="images\gym.jpg">
+				<img class="boxed-image career landscape" src="images\career.jpg">
+				<img class="boxed-image registrar portrait" src="images\registrar.jpg">
+				<img class="boxed-image library portrait" src="images\library.jpg">
+				<img class="boxed-image library2 portrait" src="images\library2.jpg">
+				<img class="boxed-image thecube portrait" src="images\thecube.jpg">
+				<img class="boxed-image writingcenter landscape" src="images\writingcenter.jpg">
+				<img class="boxed-image burpdick landscape" src="images\burpdick.jpg">
+				<img class="boxed-image dean landscape" src="images\dean.jpg">
+				<img class="boxed-image associate landscape" src="images\associate.jpg">
+				<img class="boxed-image techdesk landscape" src="images\techdesk.jpg">
+				<img class="boxed-image coop landscape" src="images\coop.jpg">
+			</div>
+			<div class="thumb-box">
+				<img src="images\grove.jpg" id="0" onclick="selectImage(this.id)">
+				<img src="images\hydraulics.jpg" id="1" onclick="selectImage(this.id)">
+				<img src="images\baun.jpg" id="2" onclick="selectImage(this.id)">
+				<img src="images\khoury.jpg" id="3" onclick="selectImage(this.id)">
+				<img src="images\concert.jpg" id="4" onclick="selectImage(this.id)">
+				<img src="images\ctc.jpg" id="5" onclick="selectImage(this.id)">
+				<img src="images\printer.jpg" id="6" onclick="selectImage(this.id)">
+				<img src="images\duc.jpg" id="7" onclick="selectImage(this.id)">
+				<img src="images\emergency.jpg" id="8" onclick="selectImage(this.id)">
+				<img src="images\emergency2.jpg" id="9" onclick="selectImage(this.id)">
+				<img src="images\financial.jpg" id="10" onclick="selectImage(this.id)">
+				<img src="images\gym.jpg" id="11" onclick="selectImage(this.id)">
+				<img src="images\career.jpg" id="12" onclick="selectImage(this.id)">
+				<img src="images\registrar.jpg" id="13" onclick="selectImage(this.id)">
+				<img src="images\library.jpg" id="14" onclick="selectImage(this.id)">
+				<img src="images\library2.jpg" id="15" onclick="selectImage(this.id)">
+				<img src="images\thecube.jpg" id="16" onclick="selectImage(this.id)">
+				<img src="images\writingcenter.jpg" id="17" onclick="selectImage(this.id)">
+				<img src="images\burpdick.jpg" id="18" onclick="selectImage(this.id)">
+				<img src="images\dean.jpg" id="19" onclick="selectImage(this.id)">
+				<img src="images\associate.jpg" id="20" onclick="selectImage(this.id)">
+				<img src="images\techdesk.jpg" id="21" onclick="selectImage(this.id)">
+				<img src="images\coop.jpg" id="22" onclick="selectImage(this.id)">
+			</div>
+			<div class="image-info">
+				<div class="append-to" id="append-to"></div>
+			</div>
+			<div class="map-box">
+				<!-- <iframe class="maps grove" src="https://maps.google.com/maps?q=McCaffrey%Grove&t=k&z=19&ie=UTF8&iwloc=&output=embed"></iframe> -->
+
+				<!-- <iframe class="maps hydraulics" src="https://maps.google.com/maps?q=Hydro%Lab%Stockton&t=k&z=19&ie=UTF8&iwloc=&output=embed"></iframe> -->
+
+				<!-- <iframe class="maps baun" src="https://maps.google.com/maps?q=Baun%Hall%Pacific&t=k&z=19&ie=UTF8&iwloc=&output=embed"></iframe> -->
+
+				<iframe class="maps khoury" src="https://maps.google.com/maps?q=Khoury%Hall&t=k&z=19&ie=UTF8&iwloc=&output=embed"></iframe>
+
+				<!-- <iframe class="maps duc" src="https://maps.google.com/maps?q=derosa%20university%20center&t=k&z=19&ie=UTF8&iwloc=&output=embed"></iframe> -->
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
@@ -93,9 +169,66 @@
 		$('.go-right').hover(function(){
 			$(this).toggleClass('go-right-hover',100);
 		});
+		$('.go-left').hover(function(){
+			$(this).toggleClass('go-right-hover',100);
+		});
+		$('.box-left').hover(function(){
+			$(this).toggleClass('box-hover',100);
+		});
+		$('.box-right').hover(function(){
+			$(this).toggleClass('box-hover',100);
+		});
 		function galleryButton() {
 			$('.title-page').fadeOut();
 			$('.gallery').delay("fast").fadeIn();
+		}
+		function homeButton() {
+			$('.gallery').fadeOut();
+			$('.title-page').delay("fast").fadeIn();
+		}
+		var images = ["grove", "hydraulics", "baun", "khoury", "concert", "ctc", "printer", "duc", "emergency", "emergency2", "financial", "gym", "career", "registrar", "library", "library2", "thecube", "writingcenter", "burpdick", "dean", "associate", "techdesk", "coop"];
+		var imagetextarray = ["The Grove", "Hydraulics Lab", "Baun Hall", "Khoury Hall", "Alex G. Spanos Center", "John T. Chambers Technology Center", "SOECS printer", "Don and Karen DeRosa University Center", "Emergency button", "Emergency button (indoors)", "Financial Aid Office", "Baun Fitness Center", "Career Resource Center", "The Registrar's office", "Library: Book Area", "Library: Reading Area", "The Cube", "The Writing + Tutoring Center", "Paul Burdick's Bench", "The Dean's Office", "The Associate Dean's office", "Pacific Technology Helpdesk", "The Co-Op Office"];
+		var imageId = 0;
+		$('.boxed-image').fadeOut();
+		var dot = '.';
+		var imageName = images[imageId];
+		var combine = dot.concat(imageName);
+		$(combine).fadeIn();
+		var imageInfoText = imagetextarray[imageId];
+		document.getElementById("append-to").innerHTML = imageInfoText;
+
+		function boxLeft() {
+			imageId--;
+			if (imageId < 0) {
+				imageId = 22
+			}
+			imageName = images[imageId];
+			combine = dot.concat(imageName);
+			$('.boxed-image').fadeOut();
+			$(combine).fadeIn();
+			var imageInfoText = imagetextarray[imageId];
+			document.getElementById("append-to").innerHTML = imageInfoText;
+		}
+		function boxRight() {	
+			imageId++;
+			if (imageId > 22) {
+				imageId = 0
+			}
+			imageName = images[imageId];
+			combine = dot.concat(imageName);
+			$('.boxed-image').fadeOut();
+			$(combine).fadeIn();
+			var imageInfoText = imagetextarray[imageId];
+			document.getElementById("append-to").innerHTML = imageInfoText;
+		}
+		function selectImage(select) {
+			imageName = images[select];
+			combine = dot.concat(imageName);
+			$('.boxed-image').fadeOut();
+			$(combine).fadeIn();
+			imageId = select;
+			var imageInfoText = imagetextarray[imageId];
+			document.getElementById("append-to").innerHTML = imageInfoText;
 		}
 		// $('.start-button').hover(function(){$(this).toggleClass('forum_hover');});
 	</script>
