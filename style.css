@@ -343,3 +343,6 @@ h3 > a {
 ::-webkit-scrollbar-thumb:hover {
   background: #4fadff;
 }
+span {
+	color: #4192d9;
+}
